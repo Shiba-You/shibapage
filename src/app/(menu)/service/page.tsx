@@ -1,12 +1,12 @@
 import PageTemplate from "@/components/PageTemplate";
 import React from "react";
 
-const Profile = () => {
+const Service = () => {
   return (
-    <PageTemplate pageTitle={"Profile"}>
-      <p>出身</p>
+    <PageTemplate pageTitle={"Service"}>
+      <p>開発予定..</p>
     </PageTemplate>
   );
 };
 
-export default Profile;
+export default Service;

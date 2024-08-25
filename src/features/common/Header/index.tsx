@@ -34,7 +34,7 @@ const Header: FC = () => {
             typeClassName={style.typeClassName}
           />
           <RouteButton
-            label="Publication"
+            label="Service"
             route={"/service"}
             buttonType="Thin"
             className={style.ThinButton}
