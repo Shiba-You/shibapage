@@ -1,0 +1,137 @@
+/*************   module import   *************/
+// @import "./lib/inter.scss";
+
+/*************   custom theme   *************/
+
+/*--  theme color  --*/
+$g-main-theme-color: #6cc9c3;
+$g-dark-theme-color: #4eaaac;
+$g-main-grey: #000000;
+
+/*--  font theme  --*/
+$g-button-small-font-size: 18px;
+$g-button-font-size: 20px;
+$g-button-large-font-size: 24px;
+$g-large-font-size: 40px;
+$g-midium-font-size: 32px;
+$g-button-font-weight: 50;
+
+$g-slim-font-family: "Inter", "system-ui";
+
+/*--  spacer --*/
+$g-xlarge-spacer: 100px;
+$g-large-spacer: 50px;
+$g-midium-spacer: 30px;
+$g-small-spacer: 18px;
+$g-xsmall-spacer: 12px;
+
+/*--  break point  --*/
+// 画面幅が n px 以上の時に適用
+$breakpoint-up: (
+  "sm": "screen and (min-width: 400px)",
+  "md": "screen and (min-width: 768px)",
+  "lg": "screen and (min-width: 1000px)",
+  "xl": "screen and (min-width: 1200px)",
+) !default;
+
+// 画面幅が n px 以下の時に適用
+$breakpoint-down: (
+  "sm": "screen and (max-width: 399px)",
+  "md": "screen and (max-width: 767px)",
+  "lg": "screen and (max-width: 999px)",
+  "xl": "screen and (max-width: 1199px)",
+) !default;
+
+// @mixinの定義
+@mixin mq-up($breakpoint: md) {
+  @media #{map-get($breakpoint-up, $breakpoint)} {
+    @content;
+  }
+}
+
+@mixin mq-down($breakpoint: md) {
+  @media #{map-get($breakpoint-down, $breakpoint)} {
+    @content;
+  }
+}
+
+/*--  custom class  --*/
+
+.gMainContainer {
+  margin: 100px auto 0 auto;
+  @include mq-up("sm") {
+    width: 80%;
+  }
+  @include mq-down("sm") {
+    width: 100%;
+  }
+}
+
+.gMainContainerMbile {
+  width: 100%;
+  margin: 100px auto 0 auto;
+}
+
+/*--  format font  --*/
+.h1 {
+  margin: $g-small-spacer 0 $g-xsmall-spacer 0;
+  padding-left: 0.5em;
+  border-left: 2px solid $g-main-theme-color;
+  font-size: 24px;
+  font-weight: 600;
+}
+
+.h2 {
+  margin: $g-small-spacer 0 $g-xsmall-spacer 0;
+  font-size: 20px;
+  font-weight: 600;
+}
+
+.h3 {
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.h4 {
+  font-size: 16px;
+  font-weight: 400;
+}
+
+.body1 {
+  font-size: 14px;
+}
+
+.body2 {
+  font-size: 11px;
+}
+
+.a {
+  font-size: 16px;
+  color: blue;
+  border-bottom: 1px solid blue;
+}
+
+.subtitle1 {
+  font-size: 13px;
+}
+
+.subtitle2 {
+  font-size: 6px;
+}
+
+.blockquote {
+  @extend .body1;
+  margin-left: 1em;
+}
+
+/*--  fadeIn Format  --*/
+.fade-in-content {
+  opacity: 0;
+  transition-duration: 0.5s;
+  transition-property: opacity, transform;
+}
+
+.is-scroll-in {
+  opacity: 1;
+  transform: translate(0, -50px);
+}

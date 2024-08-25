@@ -1,0 +1,76 @@
+@import "@/styles/globals.scss";
+
+$headet-height: 100%;
+
+.sideMenuBox {
+  background-color: rgba($g-main-grey, 0.35);
+  box-shadow: none;
+  height: $headet-height;
+  position: fixed;
+  z-index: 1;
+  @include mq-down("sm") {
+    width: 100%;
+    height: 100%;
+    top: 0;
+  }
+  @include mq-up("sm") {
+    width: 40%;
+    left: 0;
+  }
+}
+
+.flexBox {
+  position: relative;
+  height: 100%;
+  width: 100%;
+}
+
+.Toolbar {
+  margin: 0 auto;
+  width: 98%;
+}
+
+.menuGroup {
+  margin: 0 0 0 auto;
+  height: $headet-height;
+}
+
+.Typography {
+  font-size: $g-large-font-size;
+  color: white;
+  font-weight: 100;
+  font-family: $g-slim-font-family;
+  font-weight: 200;
+  cursor: pointer;
+}
+
+.ThinButtonDiv {
+  width: 100%;
+  margin-top: 30px;
+  font-size: $g-button-large-font-size;
+  text-align: center;
+}
+
+.ThinButton1 {
+  position: absolute;
+  top: 10%;
+}
+
+.ThinButton2 {
+  position: absolute;
+  top: 50%;
+}
+
+.ThinButton3 {
+  position: absolute;
+  top: 60%;
+}
+
+.ThinButton4 {
+  position: absolute;
+  top: 70%;
+}
+
+.ThinButton {
+  width: 30%;
+}
