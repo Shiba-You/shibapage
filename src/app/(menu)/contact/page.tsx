@@ -1,7 +1,12 @@
+import PageTemplate from "@/components/PageTemplate";
 import React from "react";
 
-const Contact = () => {
-  return <div>Contact</div>;
+const Profile = () => {
+  return (
+    <PageTemplate pageTitle={"Profile"}>
+      <p>出身</p>
+    </PageTemplate>
+  );
 };
 
-export default Contact;
+export default Profile;

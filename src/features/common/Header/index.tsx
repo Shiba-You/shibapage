@@ -1,6 +1,5 @@
 "use client";
 import React, { FC, useState } from "react";
-import { usePathname } from "next/navigation";
 import Toolbar from "@mui/material/Toolbar";
 import { useRouter } from "next/navigation";
 import style from "./style.module.scss";
@@ -9,7 +8,6 @@ import RouteButton from "@/features/common/RouteButton";
 
 const Header: FC = () => {
   const router = useRouter();
-  const nowPath = usePathname();
   const [isOpen, setIsOpen] = useState(false);
 
   const routes = (next: string) => router.push(next);
@@ -17,7 +15,6 @@ const Header: FC = () => {
   const openMenu = () => {
     setIsOpen(!isOpen);
   };
-  if (nowPath == "/") return <></>;
 
   return (
     <div className={style.AppBar}>

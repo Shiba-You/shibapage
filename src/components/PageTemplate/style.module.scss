@@ -1,0 +1,9 @@
+@import "@/styles/globals.scss";
+
+.mainContainer {
+  @extend .gMainContainer;
+}
+
+.spacer {
+  margin: $g-large-spacer 0;
+}
