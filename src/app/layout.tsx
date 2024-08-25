@@ -12,8 +12,7 @@ export const metadata: Metadata = {
   authors: {
     name: "Shiba-You",
   } as Author,
-  icons:
-    "https://user-images.githubusercontent.com/50415577/196866382-ed9ebf64-f2c2-4efa-8094-e223a5cf5d70.png",
+  icons: "https://avatars.githubusercontent.com/u/50415577?v=4",
 };
 
 export default function RootLayout({
