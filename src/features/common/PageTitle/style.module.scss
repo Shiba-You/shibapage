@@ -1,0 +1,42 @@
+@import "@/styles/globals.scss";
+
+.Typography {
+  font-size: $g-midium-font-size;
+  color: black;
+  font-family: $g-slim-font-family;
+  text-align: center;
+  @include mq-down("sm") {
+    margin-bottom: $g-small-spacer;
+  }
+}
+
+.hr {
+  border: none;
+  background-color: $g-main-theme-color;
+  height: 5px;
+  @include mq-up("sm") {
+    width: 5%;
+    margin-bottom: $g-large-spacer;
+  }
+  @include mq-down("sm") {
+    width: 10%;
+    margin-bottom: $g-midium-spacer;
+  }
+}
+
+.fadeInContent {
+  @extend .fade-in-content;
+}
+
+.fadeIn {
+  @extend .is-scroll-in;
+}
+
+.spacer {
+  @include mq-up("sm") {
+    padding-top: $g-large-spacer;
+  }
+  @include mq-down("sm") {
+    padding-top: $g-small-spacer;
+  }
+}

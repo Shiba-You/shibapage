@@ -1,0 +1,27 @@
+@import "@/styles/globals.scss";
+
+@include mq-up("sm") {
+  .Card {
+    padding: 50px 40px;
+    box-shadow: none;
+    color: black;
+    background-color: white;
+  }
+}
+
+@include mq-down("sm") {
+  .Card {
+    padding: 50px 20px;
+    box-shadow: none;
+    color: black;
+    background-color: white;
+  }
+}
+
+.fadeInContent {
+  @extend .fade-in-content;
+}
+
+.fadeIn {
+  @extend .is-scroll-in;
+}

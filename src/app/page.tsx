@@ -1,4 +1,4 @@
-import TopMenu from "@/features/routes/top/TopMenu";
+import TopMenu from "@/components/TopMenu";
 import Vanta from "@/features/routes/top/Vanta";
 // import Image from "next/image";
 

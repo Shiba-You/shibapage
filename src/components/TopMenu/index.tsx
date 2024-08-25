@@ -1,40 +1,39 @@
-"use client";
 import React, { FC } from "react";
-import { useRouter } from "next/navigation";
 import style from "./style.module.scss";
-import ThinButton from "@/components/CustomButton";
+import RouteButton from "@/features/common/RouteButton";
 import clsx from "clsx";
 
 const TopMenu: FC = () => {
-  const router = useRouter();
-
   return (
     <div className={style.sideMenuBox}>
       <div className={style.flexBox}>
         <div className={clsx(style.ThinButtonDiv, style.ThinButton1)}>
-          <p className={style.Typography} onClick={() => router.push("/")}>
+          <p className={style.Typography}>
             Yosuke
             <br /> Shibata
           </p>
         </div>
         <div className={clsx(style.ThinButtonDiv, style.ThinButton2)}>
-          <ThinButton
+          <RouteButton
             label="Profile"
-            onClick={() => router.push("/profile")}
+            route="/profile"
+            buttonType="Thin"
             className={style.ThinButton}
           />
         </div>
         <div className={clsx(style.ThinButtonDiv, style.ThinButton3)}>
-          <ThinButton
+          <RouteButton
             label="Service"
-            onClick={() => router.push("/service")}
+            route="/service"
+            buttonType="Thin"
             className={style.ThinButton}
           />
         </div>
         <div className={clsx(style.ThinButtonDiv, style.ThinButton4)}>
-          <ThinButton
+          <RouteButton
             label="Contact"
-            onClick={() => router.push("contact")}
+            route="contact"
+            buttonType="Thin"
             className={style.ThinButton}
           />
         </div>

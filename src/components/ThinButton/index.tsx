@@ -2,14 +2,14 @@ import React, { FC } from "react";
 import style from "./style.module.scss";
 import clsx from "clsx";
 
-type CustomButtonType = {
+type ThinButtonType = {
   label: string;
   onClick: () => void;
   className?: string;
   typeClassName?: string;
 };
 
-const CustomButton: FC<CustomButtonType> = ({
+const ThinButton: FC<ThinButtonType> = ({
   label,
   onClick,
   className,
@@ -24,4 +24,4 @@ const CustomButton: FC<CustomButtonType> = ({
   );
 };
 
-export default CustomButton;
+export default ThinButton;
