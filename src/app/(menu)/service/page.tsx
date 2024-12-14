@@ -1,10 +1,11 @@
 import PageTemplate from "@/components/PageTemplate";
+import ServiceContent from "@/features/routes/service/content";
 import React from "react";
 
 const Service = () => {
   return (
     <PageTemplate pageTitle={"Service"}>
-      <p>開発予定..</p>
+      <ServiceContent />
     </PageTemplate>
   );
 };
